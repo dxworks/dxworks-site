@@ -26,6 +26,8 @@ jobs:
         run: |
           npm i
           npm run build
+      - name: copy CNAME
+        run: echo ${{ secrets.DXWORKS_CNAME }} > dist/dxworks-site/CNAME
       - name: copy LICENSE
         run: cp LICENSE dist/dxworks-site/LICENSE
       - name: Pushes to another repository
