@@ -1,0 +1,39 @@
+name: Build & Deploy To Github pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: npm install and npm run build
+        run: |
+          npm i
+          npm run build
+      - name: copy LICENSE
+        run: cp LICENSE dist/dxworks-site/LICENSE
+      - name: Pushes to another repository
+        uses: cpina/github-action-push-to-another-repository@master
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.GH_TOKEN }}
+        with:
+          source-directory: 'dist/dxworks-site'
+          destination-github-username: 'dxworks'
+          destination-repository-name: 'dxworks.github.io'
+          user-email: mario.rivis@gmail.com
