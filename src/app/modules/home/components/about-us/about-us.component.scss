@@ -1,0 +1,33 @@
+@import "../../../../../style/variables";
+
+.about-us-component {
+  overflow: hidden;
+  background: linear-gradient(to top, $primary 0%, #fff 80%);
+  background-size: cover;
+  position: relative;
+  min-height: 350px;
+
+
+  .card {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+    .dev-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 1px solid;
+      overflow: hidden;
+
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+    }
+  }
+}
