@@ -1,0 +1,45 @@
+@import "../../../../../style/variables";
+
+header {
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: $header-height;
+  z-index: $z-index-header;
+  border-bottom: 1px solid transparent;
+  transition: all .35s ease-in-out;
+
+  .navbar {
+    height: 100%;
+    background-color: $primary;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .logo {
+    height: 100%;
+    img {
+      height: 100%;
+      width: 200px;
+      object-fit: cover;
+      border: none;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      padding: 0;
+    }
+  }
+}
+
+
+
+@include media-breakpoint-down(lg) {
+
+  header {
+    width: 100%;
+
+    nav {
+      padding: 0;
+    }
+  }
+}

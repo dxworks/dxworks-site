@@ -1,0 +1,54 @@
+@import "../../../../../style/variables";
+.mission-component {
+  overflow: hidden;
+  background: linear-gradient(to top left, rgba(77, 112, 179, 0) 0%, #ffcc99 100%);
+  background-size: cover;
+  position: relative;
+  min-height: 350px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-box {
+  border: 2px solid #FFFDFD;
+  padding: 2rem;
+  align-self: center;
+  display: flex;
+  width: 100%;
+}
+
+.mission-text {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: 2px solid #FFFDFD;
+  font-size: 18px;
+  color: $primary;
+  font-weight: 900;
+  margin: 0;
+}
+
+@include media-breakpoint-up(md) {
+
+  .mission-box {
+    width: 70%;
+  }
+
+  .mission-text {
+    font-size: 20px;
+  }
+}
+
+
+@include media-breakpoint-up(xl) {
+  .mission-text {
+    font-size: 30px;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .mission-text {
+    font-size: 34px;
+  }
+}

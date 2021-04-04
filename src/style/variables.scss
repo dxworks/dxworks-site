@@ -1,0 +1,37 @@
+@import "~bootstrap/scss/mixins";
+@import "mixins";
+
+//bootstrap
+$enable-prefers-reduced-motion-media-query: true;
+$enable-rounded: false;
+$font-family-base: "Foundry Monoline OT2 W05 Rg";
+$dropdown-link-color: #3c3c3d;
+$dropdown-link-active-bg: #3c3c3d;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  md1: 800px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1350px
+) !default;
+
+$blue: #3C61AD;
+$red: #ED1C5C;
+$green: #5ED198;
+$orange: #F99B21;
+$purple: #AF48F0;
+
+$primary: $blue;
+$secondary: $red;
+$dark: #1F396F;
+$light: #9db0d6;
+
+
+$header-height: 60px;
+$z-index-header: 999;
+$z-index-background: 10;
+$z-index-content: 20;
+
