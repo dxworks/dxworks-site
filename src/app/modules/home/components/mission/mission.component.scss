@@ -12,7 +12,9 @@
 }
 
 .mission-box {
-  border: 2px solid #FFFDFD;
+  border-color: #fff;
+  border-width: 10px;
+  border-style: double;
   padding: 2rem;
   align-self: center;
   display: flex;
@@ -23,7 +25,9 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  border: 2px solid #FFFDFD;
+  border-color: #fff;
+  border-width: 10px;
+  border-style: double;
   font-size: 18px;
   font-weight: 900;
   margin: 0;

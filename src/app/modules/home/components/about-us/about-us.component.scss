@@ -24,14 +24,42 @@
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      border: 3px solid $secondary;
+      border-color: $secondary;
+      border-style: double;
+      border-width: 7px 0;
       overflow: hidden;
+      position: relative;
 
       img {
         width: 150px;
         height: 150px;
         object-fit: cover;
       }
+
+      .overlay {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: linear-gradient(to top, #fff 3%, $secondary 100%);
+        opacity: 0.3;
+        transition: opacity 1s;
+        transition-timing-function: ease;
+      }
+
+      &:hover {
+        .overlay {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+
+  @include media-breakpoint-down(md) {
+    .card {
+      width: 100%;
     }
   }
 }
