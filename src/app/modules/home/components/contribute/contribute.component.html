@@ -1,0 +1,11 @@
+<div class="contribute-component row p-4">
+  <h1 class="col-12 text-center"><strong>Want to help our cause?</strong></h1>
+  <h2 class="col-12 mb-4 text-center"><strong>Get in touch with us so you can add your contribution</strong></h2>
+  <h3 class="p-2 w-100 text-center" *ngFor="let contribution of contributions">
+
+<!--    TODO   add contribution.link or some modal-->
+    <a [routerLink]="contribution.link">
+      {{contribution.text}}
+    </a>
+  </h3>
+</div>

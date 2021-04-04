@@ -5,6 +5,7 @@ import {HomeRoutingModule} from './home-routing.module';
 import { MissionComponent } from './components/mission/mission.component';
 import { BestProjectsComponent } from './components/best-projects/best-projects.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ContributeComponent } from './components/contribute/contribute.component';
 
 const components: any = [
   MissionComponent
@@ -19,7 +20,7 @@ const pages = [
       CommonModule,
       HomeRoutingModule
     ],
-  declarations: [...components, ...pages, MissionComponent, BestProjectsComponent, AboutUsComponent],
+  declarations: [...components, ...pages, MissionComponent, BestProjectsComponent, AboutUsComponent, ContributeComponent],
   exports: [...components, ...pages]
 })
 export class HomeModule {

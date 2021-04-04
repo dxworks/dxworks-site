@@ -1,8 +1,12 @@
 @import "../../../../../style/variables";
 
 .about-us-component {
+  border-color: $primary;
+  border-style: double;
+  border-width: 7px 0;
   overflow: hidden;
-  background: linear-gradient(to top, $primary 0%, #fff 80%);
+  //background: linear-gradient(to top, #ccc 0%, #fff 50%);
+   background: #fff;
   background-size: cover;
   position: relative;
   min-height: 350px;
@@ -20,7 +24,7 @@
       width: 150px;
       height: 150px;
       border-radius: 50%;
-      border: 1px solid;
+      border: 3px solid $secondary;
       overflow: hidden;
 
       img {
