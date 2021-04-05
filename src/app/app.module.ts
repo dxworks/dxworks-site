@@ -1,10 +1,12 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 import {RouterModule} from '@angular/router';
 import {LayoutModule} from './modules/layout/layout.module';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFirestore} from '@angular/fire/firestore';
+import {firebaseConfig} from '../../firebaseConfig';
 
 @NgModule({
   declarations: [
@@ -14,9 +16,11 @@ import {LayoutModule} from './modules/layout/layout.module';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    LayoutModule
+    LayoutModule,
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

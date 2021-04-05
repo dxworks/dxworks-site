@@ -25,7 +25,8 @@ function getRepositoryMeta(rm: RepositoryMeta, dxworksSiteDetails: DxworksSiteDe
     version: dxworksSiteDetails.version,
     docs: dxworksSiteDetails.docs,
     site: dxworksSiteDetails.site,
-    relevance: dxworksSiteDetails.relevance
+    relevance: dxworksSiteDetails.relevance,
+    repos: dxworksSiteDetails.repos
   };
 }
 

@@ -13,6 +13,7 @@ export interface DxworksSiteDetails {
   docs: string;
   site: string;
   relevance: number;
+  repos: string[];
 }
 
 export interface RepositoryMeta extends DxworksSiteDetails {
