@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
-import {RepositoryMeta} from '../../../types/RepositoryMeta';
 import {AngularFirestore} from '@angular/fire/firestore';
+import {RepositoryMeta} from '../../../types/RepositoryMeta';
 
 @Injectable({
   providedIn: 'root'

@@ -1,25 +1,37 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {RouterModule} from '@angular/router';
-import {LayoutModule} from './modules/layout/layout.module';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestore} from '@angular/fire/firestore';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {firebaseConfig} from '../../firebaseConfig';
+import {HeaderComponent} from './components/header/header.component';
+import {FooterComponent} from './components/footer/footer.component';
+import {AboutUsComponent} from './components/about-us/about-us.component';
+import {ContributeComponent} from './components/contribute/contribute.component';
+import {MissionComponent} from './components/mission/mission.component';
+import {ProjectsComponent} from './components/projects/projects.component';
+import {MatCardModule} from '@angular/material/card';
+
+const components: any = [
+  AppComponent,
+  HeaderComponent,
+  FooterComponent,
+  AboutUsComponent,
+  ContributeComponent,
+  MissionComponent,
+  ProjectsComponent
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    ...components
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    RouterModule,
-    LayoutModule,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    MatCardModule,
+    AngularFireModule.initializeApp(firebaseConfig),
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

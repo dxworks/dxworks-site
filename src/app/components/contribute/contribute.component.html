@@ -4,7 +4,7 @@
   <h3 class="p-2 w-100 text-center" *ngFor="let contribution of contributions">
 
 <!--    TODO   add contribution.link or some modal-->
-    <a [routerLink]="contribution.link">
+    <a [href]="contribution.link" target="_blank">
       {{contribution.text}}
     </a>
   </h3>
