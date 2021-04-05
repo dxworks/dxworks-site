@@ -6,6 +6,8 @@ import { MissionComponent } from './components/mission/mission.component';
 import { BestProjectsComponent } from './components/best-projects/best-projects.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContributeComponent } from './components/contribute/contribute.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { MatCardModule } from '@angular/material/card';
 
 const components: any = [
   MissionComponent
@@ -18,9 +20,10 @@ const pages = [
 @NgModule({
     imports: [
       CommonModule,
-      HomeRoutingModule
+      HomeRoutingModule,
+      MatCardModule
     ],
-  declarations: [...components, ...pages, MissionComponent, BestProjectsComponent, AboutUsComponent, ContributeComponent],
+  declarations: [...components, ...pages, MissionComponent, BestProjectsComponent, AboutUsComponent, ContributeComponent, ProjectsComponent],
   exports: [...components, ...pages]
 })
 export class HomeModule {
