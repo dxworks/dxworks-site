@@ -1,24 +1,31 @@
+<div class="row m-0 p-5">
+  <div class="col-12 col-md-6 col-lg-4 h-100 my-3 p-4" *ngFor="let proj of projects">
 
-<div *ngFor="let proj of projects">
-<mat-card class="project-card">
-  <mat-card-header>
-    <div mat-card-avatar class="project-card-header-image"></div>
-    <mat-card-title>{{proj.displayName}}</mat-card-title>
-    <mat-card-subtitle>{{proj.full_name}}</mat-card-subtitle>
-  </mat-card-header>
-  <div>
-    <div *ngFor="let tech of proj.technologies">
+    <mat-card class="project-card">
+      <mat-card-header>
+        <div mat-card-avatar class="project-card-header-image"></div>
+        <mat-card-title>{{proj.displayName}}</mat-card-title>
+        <mat-card-subtitle>{{proj.full_name}}</mat-card-subtitle>
+      </mat-card-header>
+      <div>
+        <div *ngFor="let tech of proj.technologies">
 
-    </div>
+        </div>
+      </div>
+      <mat-card-content>
+        <p>
+          {{proj.description}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+
+      </mat-card-actions>
+      <div class="project-labels">
+        <div class="project-label" *ngFor="let cat of proj.categories">
+          {{cat}}
+        </div>
+      </div>
+    </mat-card>
+
   </div>
-  <mat-card-content>
-    <p>
-      {{proj.description}}
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-
-  </mat-card-actions>
-</mat-card>
-
 </div>
