@@ -6,6 +6,7 @@ import {RouterModule} from '@angular/router';
 import {LayoutModule} from './modules/layout/layout.module';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestore} from '@angular/fire/firestore';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {firebaseConfig} from '../../firebaseConfig';
 
 @NgModule({
@@ -17,6 +18,7 @@ import {firebaseConfig} from '../../firebaseConfig';
     AppRoutingModule,
     RouterModule,
     LayoutModule,
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
   providers: [AngularFirestore],
