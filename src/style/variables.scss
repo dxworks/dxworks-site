@@ -18,14 +18,14 @@ $grid-breakpoints: (
   xxl: 1350px
 ) !default;
 
-$blue: #3C61AD;
-$red: #ED1C5C;
-$green: #5ED198;
-$orange: #F99B21;
-$purple: #AF48F0;
+$indigo: #4051b5;
+$teal: #009485;
+$light-blue: #049DE3;
+$red: #9D0C21;
 
-$primary: $blue;
-$secondary: $red;
+$primary: $teal;
+$secondary: $indigo;
+$danger: $red;
 $dark: #1F396F;
 $light: #9db0d6;
 

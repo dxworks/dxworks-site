@@ -1,17 +1,20 @@
 @import "../../../../../style/variables";
 .mission-component {
   overflow: hidden;
-  background: linear-gradient(to top left, rgba(77, 112, 179, 0) 0%, #ffcc99 100%);
+  //background: linear-gradient(to top, #fff 3%, #ccc 100%);
+  background: #f5efef;
   background-size: cover;
   position: relative;
   min-height: 350px;
-  height: 90vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
 }
 
 .mission-box {
-  border: 2px solid #FFFDFD;
+  border-color: #fff;
+  border-width: 10px;
+  border-style: double;
   padding: 2rem;
   align-self: center;
   display: flex;
@@ -22,9 +25,10 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  border: 2px solid #FFFDFD;
+  border-color: #fff;
+  border-width: 10px;
+  border-style: double;
   font-size: 18px;
-  color: $primary;
   font-weight: 900;
   margin: 0;
 }

@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {LayoutPageComponent} from './pages/layout/layout.page';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const components: any = [
   HeaderComponent
@@ -17,7 +18,7 @@ const pages = [
     CommonModule,
     RouterModule,
   ],
-  declarations: [...components, ...pages],
+  declarations: [...components, ...pages, FooterComponent],
   exports: [...components, ...pages]
 })
 export class LayoutModule {
